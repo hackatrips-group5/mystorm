@@ -1,0 +1,29 @@
+
+
+
+http://papi.minube.com/cities?lang=es&api_key=RAXA3jHVCgJZvmzB
+{"city_id":"335361","city_name":" Albaguen Island","zone_id":"4551","zone_name":"Filipinas","country_id":"69","country_name":"Filipinas"},
+
+http://papi.minube.com/cities?lang=es&api_key=RAXA3jHVCgJZvmzB&city_id=335361
+
+//
+http://papi.minube.com/zones?lang=es&api_key=RAXA3jHVCgJZvmzB 
+{"zone_id":"6751","zone_name":"Akmola","country_id":"454","country_name":"Kazajist\u00e1n"},
+
+COUNTRIES
+http://papi.minube.com/countries?lang=es&api_key=RAXA3jHVCgJZvmzB 
+{"country_id":"313","country_name":"Albania"}
+
+
+//POIS
+http://papi.minube.com/pois?lang=es&api_key=RAXA3jHVCgJZvmzB&city_id=335361
+[{"id":"1085441","name":"Bluecove resort Port Barton","latitude":"9.742746235743","longitude":"118.731923941119","country_id":"69","zone_id":"4551","city_id":"335361","subcategory_id":"68","picture_url":"http:\/\/esphoto360x360.mnstatic.com\/c69c53693f3da90ea0a9b217aca96f28"}]
+
+- city_id
+- zone_id
+-country_id
+-subcategoría
+-categoría
+-latitude
+-longitude
+/pois: 
