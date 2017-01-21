@@ -33,23 +33,12 @@ public class Trip {
 	public final List<Poi> getListaPoi() {
 		return listaPoi;
 	}
-	/**
-	 * @param listaPoi the listaPoi to set
-	 */
-	public final void setListaPoi(List<Poi> listaPoi) {
-		this.listaPoi = listaPoi;
-	}
+
 	/**
 	 * @return the listaUsers
 	 */
 	public final List<User> getListaUsers() {
 		return listaUsers;
-	}
-	/**
-	 * @param listaUsers the listaUsers to set
-	 */
-	public final void setListaUsers(List<User> listaUsers) {
-		this.listaUsers = listaUsers;
 	}
 }
 

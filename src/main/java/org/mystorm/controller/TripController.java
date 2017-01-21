@@ -16,9 +16,14 @@ public class TripController {
     @Autowired
 	private TripRepository repository;
 	
+    /**
+     * TODO add user id to retrieve trips 
+     * @param userName
+     * @return
+     */
     @RequestMapping("/trips")
     public List<Trip> trip(@RequestParam(value="name", defaultValue="World") String userName) {
-        return repository.findAll();
+        return (List<Trip>) repository.findAll();
     }
 }
 
