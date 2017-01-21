@@ -1,5 +1,7 @@
 package org.mystorm.model;
 
+import java.util.Map;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +19,10 @@ public class User {
 	// 0 Anfitrion
 	// 1 Invitado
 	int rol;
+	
+	// key: travelSummaryId
+	// value: travelSummary
+	Map<Long, TravelSummary> travelSummaryMap;
 
 	/**
 	 * @return the id
@@ -59,8 +65,20 @@ public class User {
 	public final void setRol(int rol) {
 		this.rol = rol;
 	}
-	
-	
-	
+
+	/**
+	 * @return the travelSummaryMap
+	 */
+	public final Map<Long, TravelSummary> getTravelSummaryMap() {
+		return travelSummaryMap;
+	}
+
+	/**
+	 * @param travelSummaryMap the travelEventMap to set
+	 */
+	public final void setSummaryEventMap(Map<Long, TravelSummary> travelSummaryMap) {
+		this.travelSummaryMap = travelSummaryMap;
+	}
+			
 
 }

@@ -19,8 +19,13 @@ public class ProposalPlace {
 	
 	//
 	int durationMinutes;
+	//
+	// 0: Morning
+	// 1: Evening
+	// 2: Night
+	int doProposal; 
 	
-	// key: memberId
+	// key: userId
 	// value: valorarion
 	Map<Long, Integer> otherMemberValorationMap;
 
@@ -78,6 +83,22 @@ public class ProposalPlace {
 	 */
 	public final void setDurationMinutes(int durationMinutes) {
 		this.durationMinutes = durationMinutes;
+	}
+	
+	
+
+	/**
+	 * @return the doProposal
+	 */
+	public final int getDoProposal() {
+		return doProposal;
+	}
+
+	/**
+	 * @param doProposal the doProposal to set
+	 */
+	public final void setDoProposal(int doProposal) {
+		this.doProposal = doProposal;
 	}
 
 	/**
