@@ -1,0 +1,16 @@
+username: HackaTripsTeam5
+passwd: team5.753
+
+API KEY: 3pdarbskf4bnxj67g9npkstz
+Status: active
+
+Key: web4qnv527z3nzrddxw86j79
+Application
+    team05
+Key:
+    web4qnv527z3nzrddxw86j79 
+Secret:
+    JDDYJVgs2n 
+Status:
+    active 
+
