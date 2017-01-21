@@ -14,6 +14,9 @@ public class Trip {
 	private Long id;
 
 	List<User> userList;
+	
+	//
+	TravelBoard travelBoard;
 
 	/**
 	 * @return the id
@@ -41,7 +44,23 @@ public class Trip {
 	 * @param userList
 	 *            the listaUsers to set
 	 */
-	public final void setUserLista(List<User> userList) {
+	public final void setUserList(List<User> userList) {
 		this.userList = userList;
 	}
+
+	/**
+	 * @return the travelBoard
+	 */
+	public final TravelBoard getTravelBoard() {
+		return travelBoard;
+	}
+
+	/**
+	 * @param travelBoard the travelBoard to set
+	 */
+	public final void setTravelBoard(TravelBoard travelBoard) {
+		this.travelBoard = travelBoard;
+	}
+	
+	
 }

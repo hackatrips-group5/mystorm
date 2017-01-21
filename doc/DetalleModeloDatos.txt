@@ -2,6 +2,7 @@
 ## Trip
 Un Trip tiene una lista de User 
 Representa a todos los amigos que irán de viaje
+Tiene la planificacion del viaje (travelBoard)
 
 ## User
 Un User tiene una Lista de TravelSummary 
@@ -27,4 +28,17 @@ Y la valoración realizada por cada usuario
 
 ## Poi
 Es un Punto de interes, es lo que retorna minube
+
+## TravelBoard
+Representa la planificacion del Viaje
+
+Tiene un Map de Maps, donde el primer Map:
+	key: day (unix format)
+	Value: ProposalPlaceMap
+	
+  y el segundo Map	
+	   key: doProposal { 0: Morning, 1: Evening, 2: Night}
+	   value: ProposalPlace
+
+
 
