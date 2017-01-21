@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.model.Trip;
-import com.model.User;
+import com.model.storm.User;
 
 public interface TripRepository extends JpaRepository<Trip, Long>  {
 	 List<User> findByTrip(Trip user); 
