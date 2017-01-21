@@ -20,7 +20,7 @@ public class ProposalPlace {
 	//
 	int durationMinutes;
 	//
-	// 0: Tomorrow
+	// 0: Morning
 	// 1: Evening
 	// 2: Night
 	int doProposal; 
