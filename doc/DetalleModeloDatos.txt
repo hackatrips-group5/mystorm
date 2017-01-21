@@ -1,0 +1,30 @@
+
+## Trip
+Un Trip tiene una lista de User 
+Representa a todos los amigos que irán de viaje
+
+## User
+Un User tiene una Lista de TravelSummary 
+Esta Lista, está representado por un Map donde el key es el travelSummaryId
+
+Representa todos los viajes en los que ha participado el usuario.
+
+## TravelSummary
+Representa la propuesta de viaje.
+
+Tiene una la lista de lugares propuestos a visitar por cada usuario.
+Esta representado por un Map, donde el Key el userId
+
+## PlaceByUser
+Represeta la lista de propuestas por usuarios
+
+Tiene una lista de todas las propuestas del usuario
+
+## ProposalPlace
+Representa la propuesta del usario.
+Tiene un Poi (punto de interes)
+Y la valoración realizada por cada usuario
+
+## Poi
+Es un Punto de interes, es lo que retorna minube
+

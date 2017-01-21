@@ -1,12 +1,14 @@
 package org.mystorm.model;
 
+import java.util.Map;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class TravelEvent {
+public class TravelSummary {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,6 +31,11 @@ public class TravelEvent {
 	
 	//
 	int numMustBeToVisit;
+	
+	//
+	// key: userId
+	// value: PlaceByUser
+	Map<Long, PlaceByUser> placeByUser;
 
 	/**
 	 * @return the id
@@ -169,5 +176,21 @@ public class TravelEvent {
 	public final void setNumMustBeToVisit(int numMustBeToVisit) {
 		this.numMustBeToVisit = numMustBeToVisit;
 	}
+
+	/**
+	 * @return the placeByUser
+	 */
+	public final Map<Long, PlaceByUser> getPlaceByUser() {
+		return placeByUser;
+	}
+
+	/**
+	 * @param placeByUser the placeByUser to set
+	 */
+	public final void setPlaceByUser(Map<Long, PlaceByUser> placeByUser) {
+		this.placeByUser = placeByUser;
+	}
+	
+	
 
 }

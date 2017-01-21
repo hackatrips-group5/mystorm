@@ -20,7 +20,7 @@ public class ProposalPlace {
 	//
 	int durationMinutes;
 	
-	// key: memberId
+	// key: userId
 	// value: valorarion
 	Map<Long, Integer> otherMemberValorationMap;
 

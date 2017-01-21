@@ -9,48 +9,39 @@ import javax.persistence.Id;
 
 @Entity
 public class Trip {
-	 @Id
-	  @GeneratedValue(strategy = GenerationType.AUTO)
-	  private Long id;
-	 
-	List<Poi> listaPoi;
-	List<User> listaUsers;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
+	List<User> userList;
+
 	/**
 	 * @return the id
 	 */
 	public final Long getId() {
 		return id;
 	}
+
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public final void setId(Long id) {
 		this.id = id;
 	}
-	/**
-	 * @return the listaPoi
-	 */
-	public final List<Poi> getListaPoi() {
-		return listaPoi;
-	}
-	/**
-	 * @param listaPoi the listaPoi to set
-	 */
-	public final void setListaPoi(List<Poi> listaPoi) {
-		this.listaPoi = listaPoi;
-	}
+
 	/**
 	 * @return the listaUsers
 	 */
-	public final List<User> getListaUsers() {
-		return listaUsers;
+	public final List<User> getUserList() {
+		return userList;
 	}
+
 	/**
-	 * @param listaUsers the listaUsers to set
+	 * @param userList
+	 *            the listaUsers to set
 	 */
-	public final void setListaUsers(List<User> listaUsers) {
-		this.listaUsers = listaUsers;
+	public final void setUserLista(List<User> userList) {
+		this.userList = userList;
 	}
 }
-
-
