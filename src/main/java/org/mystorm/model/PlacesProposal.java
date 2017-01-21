@@ -6,28 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class TravelEvent {
+public class PlacesProposal {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	//lugar
-	long cityId;	
-	String cityName;
-	
-	long countryId;
-	String countryName;
-	
-	long zoneId;
-	String zoneName;
-	
-
-	//Duracion
-	long startDate;
-	long endDate;
-	
-	//
-	int numMustBeToVisit;
+	 
 
 }
