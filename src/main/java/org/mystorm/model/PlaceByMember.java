@@ -14,9 +14,30 @@ public class PlaceByMember {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+	long travelEventId;
+	
 	// key: memberId
 	// value: proposalPalce
 	Map<Long, ProposalPlace> proporsalPlaceMap;
+
+	
+	
+	
+	/**
+	 * @return the travelEventId
+	 */
+	public final long getTravelEventId() {
+		return travelEventId;
+	}
+
+
+	/**
+	 * @param travelEventId the travelEventId to set
+	 */
+	public final void setTravelEventId(long travelEventId) {
+		this.travelEventId = travelEventId;
+	}
+
 
 	/**
 	 * @return the id
@@ -25,6 +46,7 @@ public class PlaceByMember {
 		return id;
 	}
 
+		
 	/**
 	 * @param id the id to set
 	 */
