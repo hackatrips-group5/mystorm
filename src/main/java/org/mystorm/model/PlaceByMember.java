@@ -1,22 +1,22 @@
 package org.mystorm.model;
 
+import java.util.Map;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class PlaceByMember {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-
-	String name;
 	
-	// 0 Anfitrion
-	// 1 Invitado
-	int rol;
+	// key: memberId
+	// value: proposalPalce
+	Map<Long, ProposalPlace> proporsalPlaceMap;
 
 	/**
 	 * @return the id
@@ -33,34 +33,21 @@ public class User {
 	}
 
 	/**
-	 * @return the name
+	 * @return the proporsalPlaceMap
 	 */
-	public final String getName() {
-		return name;
+	public final Map<Long, ProposalPlace> getProporsalPlaceMap() {
+		return proporsalPlaceMap;
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param proporsalPlaceMap the proporsalPlaceMap to set
 	 */
-	public final void setName(String name) {
-		this.name = name;
+	public final void setProporsalPlaceMap(Map<Long, ProposalPlace> proporsalPlaceMap) {
+		this.proporsalPlaceMap = proporsalPlaceMap;
 	}
+	
+	
 
-	/**
-	 * @return the rol
-	 */
-	public final int getRol() {
-		return rol;
-	}
-
-	/**
-	 * @param rol the rol to set
-	 */
-	public final void setRol(int rol) {
-		this.rol = rol;
-	}
-	
-	
-	
+	 
 
 }
