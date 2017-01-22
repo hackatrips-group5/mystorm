@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        		<script src="../jquery.js" type="text/javascript"></script>
+		<script src="../jquery.city-autocomplete.js" type="text/javascript"></script>
+        
+        <link rel="stylesheet" href="../jquery-mobile.css">
+        <script src="../jquery-mobile.js"></script>
+        
+		<script type='text/javascript'>
+		$(window).load(function(){
+		(function( $ ){
+		 
+			 $.fn.multipleInput = function() {
+		 
+				  return this.each(function() {
+		 
+					   // create html elements
+		 
+					   // list of email addresses as unordered list
+					   $list = $('<ul />');
+		 
+					   // input
+					   var $input = $('<input type="text" />').keyup(function(event) {
+		 
+							if(event.which == 32 || event.which == 188) {
+								 // key press is space or comma
+								var val = $(this).val().slice(0, -1); // remove space/comma from value
+		 
+								 // append to list of emails with remove button
+								 $list.append($('<li class="multipleInput-email"><span> ' + val + ' </span></li>')
+									  .append($('<a href="#" class="multipleInput-close" title="Remove">x</a>')
+										   .click(function(e) {
+												$(this).parent().remove();
+												e.preventDefault();
+										   })
+									  )
+								 );
+								 $(this).attr('placeholder', '');
+								 // empty input
+								 $(this).val('');
+							}
+		 
+					   });
+		 
+					   // container div
+					   var $container = $('<div class="multipleInput-container" />').click(function() {
+							$input.focus();
+					   });
+		 
+					   // insert elements into DOM
+					   $container.append($list).append($input).insertAfter($(this));
+		 
+					   // add onsubmit handler to parent form to copy emails into original input as csv before submitting
+					   var $orig = $(this);
+					   $(this).closest('form').submit(function(e) {
+		 
+							var emails = new Array();
+							$('.multipleInput-email span').each(function() {
+								 emails.push($(this).html());
+							});
+							emails.push($input.val());
+		 
+							$orig.val(emails.join());
+		 
+					   });
+		 
+					   return $(this).hide();
+		 
+				  });
+		 
+			 };
+		})( jQuery );
+
+		$('#my_input').multipleInput();
+		});
+
+		</script>
+    </head>
+    <body>
+		<form>
+			<input type="text" id="my_input"/></input>
+			<input type="submit" data-inline="true" value="Submit" data-theme="b">	 
+		</form>
+    
+    
+    
+    </body>
+</html>
