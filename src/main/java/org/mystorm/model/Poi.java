@@ -7,6 +7,11 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
+/**
+ * POI
+ * 
+ *
+ */
 @Entity
 @Data
 public class Poi {
@@ -14,6 +19,8 @@ public class Poi {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
+	
+	Long miNubeId;
 	
 	String name;
 	double latitude;

@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -17,10 +20,13 @@ public class Trip {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	List<User> userList;
+	@OneToMany
+	List<User> users;
 	
-	//
-	TravelBoard travelBoard;
-
-
+	/**
+	 * Travel board
+	 */
+	@OneToOne
+	@JoinColumn(name="board_id")
+	Board board;
 }

@@ -1,27 +1,33 @@
 package org.mystorm.model;
 
-import java.util.Map;
+import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
 @Entity
 @Data
-public class ProposalPlace {
+public class Proposal {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+	@OneToOne
 	Poi poi;
+	
 	boolean mandatory;
 	
 	//
 	int durationMinutes;
+	
 	//
 	// 0: Morning
 	// 1: Evening
@@ -29,7 +35,9 @@ public class ProposalPlace {
 	int doProposal; 
 	
 	// key: userId
-	// value: valorarion
-	Map<Long, Integer> otherMemberValorationMap;
+	// value: valoration
+	@OneToMany
+	List<Vote> otherMemberValorationMap;
 
+	//TODO: extralinks:wikipedia, rutas cercanas
 }

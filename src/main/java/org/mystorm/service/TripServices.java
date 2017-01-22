@@ -1,5 +1,7 @@
 package org.mystorm.service;
 
+import org.mystorm.repository.TripRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,4 +15,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class TripServices {
 
+	@Autowired
+	private TripRepository tripRepository;
+	
+	
+	
 }
