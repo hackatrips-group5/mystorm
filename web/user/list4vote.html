@@ -5,42 +5,15 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
 
-  
-  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <link rel="stylesheet" href="../jquery-mobile.css">
+<!--        <script src="../jquery-mobile.js"></script>        -->
 
-  
-  
-  
-
-  
-
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
-
-  
-
-  
-
-  
-
-  
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-  
-
-  
-    
-      <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
-    
-  
-    
-      <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
-    
-  
-
-  <style type="text/css">
-    
-  </style>
-
-  <title> by Palestinian</title>
+  <title></title>
 
   
     
@@ -48,7 +21,7 @@
 
 
 
-<script type='text/javascript'>
+<!--script type='text/javascript'>
 $(window).load(function(){
 var data = [{
     "name": "test",
@@ -70,7 +43,30 @@ $.each(data, function (index, value) {
 $('#searchFood').html(output).listview("refresh");
 });
 
-</script>
+</script-->
+
+		<script>
+			$(document).ready(function() {
+			  //var pAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+			  /*$.getJSON( flickerAPI, {
+				tags: "mount rainier",
+				tagmode: "any",
+				format: "json"
+			  })*/
+			  $.getJSON( "http://papi.minube.com/pois?lang=es&api_key=RAXA3jHVCgJZvmzB&city_id=231291&callback=?" )
+				.done(function( data ) {
+				 /* $.each( data.items, function( i, item ) {
+					$( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+					if ( i === 3 ) {
+					  return false;
+					}
+				  });*/
+				});
+			});
+		
+		</script>
+
+
 
   
 </head>
@@ -78,7 +74,7 @@ $('#searchFood').html(output).listview("refresh");
 <body>
   <div data-role="page" id="home_page">
     <div data-role="header" data-theme="a">
-         <h1>Header</h1>
+         <h1>Pepito</h1>
 
     </div>
     <!-- Header -->
@@ -87,16 +83,8 @@ $('#searchFood').html(output).listview("refresh");
     </div>
 </div>
   
-  <script>
-  // tell the embed parent frame the height of the content
-  if (window.parent && window.parent.parent){
-    window.parent.parent.postMessage(["resultsFrame", {
-      height: document.body.getBoundingClientRect().height,
-      slug: "V8me6"
-    }], "*")
-  }
-</script>
 
 </body>
 
 </html>
+
