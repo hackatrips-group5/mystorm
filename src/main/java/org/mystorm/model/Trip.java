@@ -12,6 +12,7 @@ import lombok.Data;
 @Entity
 @Data
 public class Trip {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -21,49 +22,5 @@ public class Trip {
 	//
 	TravelBoard travelBoard;
 
-	/**
-	 * @return the id
-	 */
-	public final Long getId() {
-		return id;
-	}
 
-	/**
-	 * @param id
-	 *            the id to set
-	 */
-	public final void setId(Long id) {
-		this.id = id;
-	}
-
-	/**
-	 * @return the listaUsers
-	 */
-	public final List<User> getUserList() {
-		return userList;
-	}
-
-	/**
-	 * @param userList
-	 *            the listaUsers to set
-	 */
-	public final void setUserList(List<User> userList) {
-		this.userList = userList;
-	}
-
-	/**
-	 * @return the travelBoard
-	 */
-	public final TravelBoard getTravelBoard() {
-		return travelBoard;
-	}
-
-	/**
-	 * @param travelBoard the travelBoard to set
-	 */
-	public final void setTravelBoard(TravelBoard travelBoard) {
-		this.travelBoard = travelBoard;
-	}
-	
-	
 }

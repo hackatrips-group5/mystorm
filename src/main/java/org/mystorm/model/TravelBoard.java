@@ -8,8 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
 public class TravelBoard {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -18,5 +18,5 @@ public class TravelBoard {
 	// Value: ProposalPlaceMap
 	//   key: doProposal { 0: Morning, 1: Evening, 2: Night}
 	//   value: ProposalPlace
-	Map<Long, Map<Integer, ProposalPlace>> ProposalPlaceByDay;
+	//Map<Long, Map<Integer, ProposalPlace>> ProposalPlaceByDay;
 }

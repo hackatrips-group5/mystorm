@@ -23,7 +23,7 @@ public class TripController {
      */
     @RequestMapping("/trips")
     public List<Trip> trip(@RequestParam(value="name", defaultValue="World") String userName) {
-        return (List<Trip>) repository.findAll();
+        return repository.findAll();
     }
 }
 

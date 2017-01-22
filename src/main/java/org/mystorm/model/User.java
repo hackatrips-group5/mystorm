@@ -25,6 +25,6 @@ public class User {
 	
 	// key: travelSummaryId
 	// value: travelSummary
-	Map<Long, TravelSummary> travelSummaryMap;
+	Map<Long, TravelSummary> travelSummary;
 
 }
